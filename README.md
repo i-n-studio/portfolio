@@ -1,1 +1,1 @@
-# inouenaoto.portfolio.io
+# https://i-n-studio.github.io/portfolio
