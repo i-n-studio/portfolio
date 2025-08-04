@@ -381,10 +381,27 @@ img {
   margin-right: 0;
 }
 
+.works-img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+  position: relative;
+}
+
 .works-img img,
 .works-img video {
   border: 1px solid #e6e6e6;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.works-item:hover .works-img img,
+.works-item:hover .works-img video {
+  transform: scale(1.05);
 }
 
 .works-name {
@@ -736,6 +753,10 @@ img {
     flex: 0 0 48%;
     margin-right: 0;
     margin-bottom: 40px;
+  }
+
+  .works-img {
+    height: 150px;
   }
 
   .works-name {
