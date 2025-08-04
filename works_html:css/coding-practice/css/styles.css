@@ -1,0 +1,359 @@
+@charset "utf-8" ;
+
+/* ==========================================================================
+    Base Styles
+========================================================================== */
+
+body {
+    margin: 0 auto;
+    font-family: Arial, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.wrap {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    /* 1100px以下 */
+    @media screen and (max-width: 1100px) {
+        max-width: 700px;
+    }
+
+    /* 720px以下 */
+    @media screen and (max-width: 720px) {
+        max-width: 600px;
+    }
+}
+
+/* ==========================================================================
+    Header
+========================================================================== */
+
+.h_contents{
+    align-items: center;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+}
+
+.h_logo{
+    margin-left: 20px;
+}
+
+/* --------------------------------------------------------------------------
+    PC Menu
+-------------------------------------------------------------------------- */
+
+.h_pc-menu{
+    @media screen and (max-width:720px){
+        display: none;
+    }
+}
+
+.h_pm_ul{
+    display: flex;
+}
+
+.h_pm_ul_li{
+    margin-right: 20px;
+}
+
+.h_pm_ul_li > a{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.h_pm_ul_li > a:hover{
+    transition: 0.3s ease-in-out;
+    color: #aaa;
+}
+
+/* --------------------------------------------------------------------------
+    SP Menu
+-------------------------------------------------------------------------- */
+
+.sp-menu__box {
+    position: fixed;
+    align-items: center;
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    width: 60px;
+    z-index: 90;
+
+    @media screen and (min-width:720px){
+        display: none;
+    }
+}
+
+.sp-menu__box span,
+.sp-menu__box span::before,
+.sp-menu__box span::after {
+    position: absolute;
+    display: block;
+    height: 3px;
+    width: 25px;
+    background: #000;
+    border-radius: 3px;
+    content: "";
+}
+
+.sp-menu__box span::before {
+    bottom: 8px;
+}
+
+.sp-menu__box span::after {
+    top: 8px;
+}
+
+#sp-menu__check {
+    display: none;
+}
+
+#sp-menu__check:checked ~ .sp-menu__box span {
+    background: rgba(255, 255, 255, 0);
+}
+
+#sp-menu__check:checked ~ .sp-menu__box span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+#sp-menu__check:checked ~ .sp-menu__box span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+#sp-menu__check:checked ~ .sp-menu__content {
+    left: 0;
+}
+
+.sp-menu__content {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    z-index: 80;
+    background-color: rgba(25, 25, 25, 0.8);
+    transition: all 0.5s;
+}
+
+.sp-menu__list {
+    padding: 70px 10px 0;
+}
+
+.sp-menu__item {
+    border-bottom: solid 1px #ffffff;
+    list-style: none;
+}
+
+.sp-menu__link {
+    box-sizing: border-box;
+    display: block;
+    padding: 9px 15px 10px 0;
+    width: 100%;
+    font-size: 15px;
+    text-decoration: none;
+    color: #ffffff;
+}
+/* ==========================================================================
+    Main
+========================================================================== */
+
+/* --------------------------------------------------------------------------
+    MV
+-------------------------------------------------------------------------- */
+
+.MV{
+    background: url(../images/main-visual.jpg) lightgray 50% / cover no-repeat;
+}
+
+.MV_contents{
+    margin-bottom: 60px;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 551px;
+
+}
+
+.MV_h1{
+    margin-top: 28.4px;
+    color: #FFF;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+
+.MV_text{
+    margin-top: 10px;
+    color: #FFF;
+    font-size:16px;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+    MC
+-------------------------------------------------------------------------- */
+
+.MC_h2{
+    margin: 0 0 50px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+
+.MC_posts{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+    /* 1100px以下で2列に */
+    @media screen and (max-width: 1100px) {
+        justify-items: center;
+        gap: 25px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* 720px以下で1列に */
+    @media screen and (max-width: 720px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.MC_post{
+    max-width: 310px;
+    height: 336px;
+}
+
+.MC_title{
+    height: 81px;
+    margin: 20px 20px 29px;
+
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.MC_date{
+    margin: 0 20px 0;
+
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+.MC_btn{
+    width: 80%;
+    max-width: 310px;
+    align-items: center;
+    display: flex;
+    height: 53px;
+    margin: 46px auto 88px;
+    justify-content: center;
+}
+
+.MC_btn_text{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.SFX{
+    background: #ffffff;
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+}
+
+.SFX:hover{
+    transition: 0.3s ease-in-out;
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.66));
+}
+/* --------------------------------------------------------------------------
+    JC
+-------------------------------------------------------------------------- */
+
+.JC{
+    background: url(../images/contact.jpg) lightgray 50% / cover no-repeat;
+}
+
+.JC_contents{
+    display: flex;
+    flex-direction: column;
+    height: 455px;
+}
+
+.JC_title{
+    margin: 60px auto 50px;
+    color: #FFF;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.JC_text{
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    line-height: 175%;
+    @media screen and (max-width:750px) {
+        font-size: 14px;
+    }
+}
+
+.JC_btn{
+    align-content: center;
+    width: 210px;
+    margin: 50px auto 0;
+    height: 54px;
+    background: rgb(131, 3, 42);
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.JC_btn:hover{
+    transition: 0.3s ease-in-out;
+    background: rgba(132, 3, 42, 0.4);
+}
+/* ==========================================================================
+    Footer
+========================================================================== */
+
+.footer_contents{
+    height: 80px;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_text{
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+
+    @media screen and (max-width:750px) {
+        font-size: 12px;
+    }
+}

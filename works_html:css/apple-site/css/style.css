@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F6F8;
+}
+
+.gnav {
+    width: 980px;
+    margin: 15px auto;
+    background: url(../img/gnav_bg.jpg) repeat-x;
+    display: flex;
+    justify-content: center;
+}
+
+.main-banner {
+    width: 980px;
+    margin: 10px auto;
+}
+
+.features {
+    width: 980px;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    padding: 20px 0;
+}
+
+footer ul {
+    width: 980px;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    justify-content: right;
+}
+
+footer li {
+    margin: 0 10px;
+}
+
+footer a {
+    font-size: 12px;
+    color:#4183a4;
+}
+
+#line {
+    color:#bdbdbd;
+}

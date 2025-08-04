@@ -1,0 +1,514 @@
+@charset "UTF-8";
+
+@media screen and (max-width:1280px) {
+
+}
+
+@media screen and (max-width:375px) {
+
+}
+
+/* def */
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.5;
+
+    color: #333;
+}
+
+img{
+    height: auto;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.rgb-white{
+    color: #FFF;
+}
+
+.wrap{
+    max-width: 1140px;
+    width: 100vw;
+    margin: 0 auto;
+}
+
+/* header */
+.header{
+    background-color: #FFF;
+}
+
+.header-contents {
+    margin: 0 20px 0 20px;
+    display: flex;
+    justify-content: space-between;
+
+    height: 100px;
+    @media screen and (max-width:768px) {
+        margin: 0 12px 0 12px;
+
+        height: 72px;
+    }
+}
+
+.header-content-l {
+    align-items: center;
+    display: flex;
+}
+
+.header-logo-img {
+    height: 52px;
+    width: 52px;
+    @media screen and (max-width:768px) {
+        height: 42px;
+        width: 42px;
+    }
+}
+
+.header-logo-text {
+    margin-left: 10px;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -1px;
+    @media screen and (max-width:768px) {
+        margin-left: 5px;
+
+        font-size: 24px;
+        letter-spacing: -1px;
+    }
+}
+
+.header-content-r {
+    align-items: center;
+    display: flex;
+}
+
+.header-list {
+    display: flex;
+    @media screen and (max-width:768px) {
+        display: none;
+    }
+}
+
+.header-list-item {
+    margin-right: 20px;
+}
+
+.header-list-text {
+    font-family: "Noto Sans JP";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.header-menu {
+    display: none;
+    @media screen and (max-width:768px) {
+        display: block;
+        margin-left: 10px;
+
+        height: 34px;
+        width: 34px;
+    }
+}
+
+/*sp-menu*/
+
+.sp-menu__box {
+    align-items: center;
+    display: flex;
+    height: 72px;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    width: 42px;
+    z-index: 90;
+
+    @media screen and (min-width:769px){
+        display: none;
+    }
+}
+
+.sp-menu__box span,
+.sp-menu__box span::before,
+.sp-menu__box span::after {
+    position: absolute;
+    display: block;
+    height: 3px;
+    width: 25px;
+    background: #000;
+    border-radius: 3px;
+    content: "";
+}
+
+.sp-menu__box span::before {
+    bottom: 8px;
+}
+
+.sp-menu__box span::after {
+    top: 8px;
+}
+
+#sp-menu__check {
+    display: none;
+}
+
+#sp-menu__check:checked ~ .sp-menu__box span {
+    background: rgba(255, 255, 255, 0);
+}
+
+#sp-menu__check:checked ~ .sp-menu__box span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+#sp-menu__check:checked ~ .sp-menu__box span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+#sp-menu__check:checked ~ .sp-menu__content {
+    left: 0;
+}
+
+.sp-menu__content {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    z-index: 80;
+    background-color: rgba(25, 25, 25, 0.8);
+    transition: all 0.5s;
+}
+
+.sp-menu__list {
+    padding: 70px 10px 0;
+}
+
+.sp-menu__item {
+    border-bottom: solid 1px #ffffff;
+    list-style: none;
+}
+
+.sp-menu__link {
+    box-sizing: border-box;
+    display: block;
+    padding: 9px 15px 10px 12px;
+    width: 100%;
+    font-size: 15px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* btn*/
+.data-btn {
+    padding: 11px 0;
+
+    display: inline-block;
+    text-align: center;
+
+    width: 186px;
+    height: 45px;
+
+    font-family: "Noto Sans JP";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+
+    border-radius: 20px;
+    background: rgba(0, 101, 54, 1);
+    @media screen and (max-width:768px) {
+        padding: 8px 0;
+
+        width: 158px;
+        height: 34px;
+
+        font-size: 15px;
+    }
+}
+
+.data-btn:hover{
+    transition: 0.25s ease-in-out;
+    background: rgba(0, 101, 54, 0.8);
+    transform: translateY(2px);
+}
+
+.contact-btn {
+    padding: 11px 0;
+
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+
+    width: 186px;
+    height: 45px;
+
+    font-family: "Noto Sans JP";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+
+    border-radius: 20px;
+    background: rgba(67, 86, 183, 1);
+    @media screen and (max-width:768px) {
+        padding: 8px 0;
+
+        width: 158px;
+        height: 34px;
+
+        font-size: 15px;
+    }
+}
+
+.contact-btn:hover{
+    transition: 0.25s ease-in-out;
+    background: rgba(67, 86, 183, 0.8);
+    transform: translateY(2px);
+}
+
+/* main */
+/* - section mv */
+
+.fv{
+    background: url(../images/coretequ-fv.jpg) no-repeat center center / cover;
+}
+
+.fv-hl{
+    padding-top: 105px;
+    margin: 0 auto;
+
+    width: 610px;
+
+    text-align: center;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 200%;
+
+    @media screen and (max-width:768px) {
+        padding-top: 126px;
+        margin: 0;
+        margin-left: 12px;
+
+        width: 279px;
+
+        text-align: left;
+        font-size: 28px;
+    }
+}
+
+.fv-text{
+    padding-top: 40px;
+    margin: 0 auto;
+
+    width: 512px;
+
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 175%;
+    @media screen and (max-width:768px) {
+        margin: 0;
+        margin-left: 12px;
+
+        width: 351px;
+
+
+        text-align: left;
+        line-height: 180%;
+        font-size: 14px;
+    }
+}
+
+.fv-btn-position{
+    padding-top: 40px;
+    padding-bottom: 143px;
+    margin: 0 auto;
+
+    text-align: center;
+    @media screen and (max-width:768px) {
+        margin-left: 12px;
+        padding-top: 65px;
+        padding-bottom: 154px;
+
+        text-align: left;
+    }
+}
+/* - section why */
+.why {
+    background: #F1F5F2;
+}
+
+.why-hl {
+    padding-top: 40px;
+
+    text-align: center;
+
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.why-card {
+    margin-top: 47px;
+    padding-bottom: 72px;
+
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3 , 1fr);
+    row-gap: 25px;
+    @media screen and (max-width:1140px) {
+        margin-left: auto;
+        margin-right: auto;
+
+        width: 95%;
+
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+    @media screen and (max-width:768px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.card-contents {
+    max-width: 340px;
+    @media screen and (max-width:375ox) {
+        width: 80%;
+    }
+}
+
+.card-title {
+    margin: 20 auto;
+    text-align: center;
+
+    color: #006536;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.card-text {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 180%;
+}
+
+/* - section contact */
+.contact {
+    height: 332px;
+    background: url(../images/coretequ-contact.jpg) no-repeat center center / cover;
+}
+
+.contact-hl {
+    text-align: center;
+    padding-top: 76px;
+
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    @media screen and (max-width:768px) {
+        text-align-last: left;
+        padding-left: 12px;
+
+        font-size: 24px;
+    }
+}
+
+.no-break{
+    display: none;
+    @media screen and (max-width:768px){
+        display: block;
+    }
+}
+
+.contact-text {
+    text-align: center;
+    padding-top: 20px;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    @media screen and (max-width:768px){
+        text-align-last: left;
+        padding-left: 12px;
+
+        font-size: 14px;
+    }
+}
+
+.contact-btn-position {
+    padding-top: 55px;
+
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+/* footer */
+
+.footer {
+    height: 121px;
+
+    background: #333;
+}
+
+.footer-list {
+    padding-top: 49px;
+    margin-left: calc(50vw - 190px);
+
+    display: flex;
+    @media screen and (max-width:768px) {
+        margin-left: calc(50vw - 150px);
+    }
+}
+
+.spacer {
+    width: 30px;
+}
+
+
+.footer-list-text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    @media screen and (max-width:768px) {
+        font-size: 12px;
+    }
+}
+
+.footer-text {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+
+    font-family: Lato ,sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    @media screen and (max-width:768px) {
+        font-size: 10px;
+    }
+}
