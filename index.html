@@ -1,34 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
+
 <head>
-  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta property='og:type' content='website'>
-  <meta property='og:title' content='WebデザイナーINOUE NAOTO ポートフォリオ'>
-  <!-- <meta property='og:url' content='URLが入る'> -->
-  <meta property='og:description' content='INOUE NAOTOのポートフォリオサイトです。'>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="WebデザイナーINOUE NAOTO ポートフォリオ">
+  <meta property="og:description" content="INOUE NAOTOのポートフォリオサイトです。">
   <meta property="og:image" content="img/ogp.png">
-  <meta name="description" content="INOUE NAOTOのポートフォリオサイトです。" />
+  <meta name="description" content="INOUE NAOTOのポートフォリオサイトです。">
   <title>INOUE NAOTO ポートフォリオ</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
-  <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
-  <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" href="img/favicon.ico" />
-  <!-- <link rel=”canonical” href=”URLが入る” /> -->
-</head>
+  <link href="css/ress.css" media="all" rel="stylesheet">
+  <link href="css/style.css" media="all" rel="stylesheet">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  </head>
 
 <body>
+
   <div class="wrapper">
 
-    <!-- header -->
-    <header class="header ">
+    <header class="header fade-in">
       <div class="container">
-        <h1 class="header-logo">
+        <h1 class="header-logo fade-in-delay-1">
           <a href=".">INOUE NAOTO</a>
         </h1>
-        <nav class="gnav">
+        <nav class="gnav fade-in-delay-2">
           <ul class="gnav-list">
             <li class="gnav-item"><a href="#works">WORKS</a></li>
             <li class="gnav-item"><a href="#skill">SKILL</a></li>
@@ -38,144 +36,252 @@
         </nav>
       </div>
     </header>
-    <!-- /header -->
-
     <main class="content">
 
-      <!-- mv -->
       <div class="mv">
-        <div class="mv-left">
+        <div class="mv-left fade-in-up fade-in-delay-3">
           <div class="card-profile">
             <div class="inoue-naoto">Inoue Naoto</div>
             <div class="_2005">
               2005年生まれ、宮崎県出身、静岡県在住
-              <br />
+              <br>
               浜松未来総合専門学校 在学
             </div>
           </div>
-          <div class="card-ctg">
+          <a href="#works" class="card-ctg">
             <div class="card-works">WORKS</div>
             <div class="text">制作したもの</div>
-          </div>
-          <div class="card-ctg">
+          </a>
+          <a href="#skill" class="card-ctg">
             <div class="card-skill">SKILL</div>
             <div class="text">使用できるソフトやデバイス</div>
-          </div>
-          <div class="card-ctg">
+          </a>
+          <a href="#about" class="card-ctg">
             <div class="card-about">ABOUT</div>
-            <div class="inoue-naoto2">“Inoue Naoto”について詳しく</div>
-          </div>
-          <div class="card-ctg">
+            <div class="inoue-naoto2">"Inoue Naoto"について詳しく</div>
+          </a>
+          <a href="#contact" class="card-ctg">
             <div class="card-contact">CONTACT</div>
             <div class="text">
               各種お問い合わせ・ご相談は
-              <br />
+              <br>
               お気軽にご連絡ください
             </div>
-          </div>
+          </a>
         </div>
-        <div class="mv-right">
+        <div class="mv-right fade-in fade-in-delay-4">
         </div>
       </div>
-      <!-- /mv -->
-
-      <!-- works -->
-      <section class="works section" id="works">
+      <section class="works section fade-in-up" id="works">
         <div class="container">
           <h2 class="title">WORKS</h2>
           <div class="works-list">
-            <a class="works-item" href="works-template.html">
-              <div class="works-img"><video width="400px" preload="meta" src="./premiere-pro_works/SUPER-FORMULA_DIRECTORSCUT.mp4" controls></video></div>
-              <p class="works-name">SUPER FORMULA DIRECTORSCUT</p>
-              <p class="works-info">Video Editing</p>
-            </a>
-            <a class="works-item" href="works-template.html">
-              <div class="works-img"><video width="400px" preload="meta" src="./premiere-pro_works/BREWMIN.mp4" controls></video></div>
-              <p class="works-name">浜松クラフトビールフェス2024 - BREWMIN様</p>
-              <p class="works-info">Video Editing</p>
-            </a>
-            <a class="works-item" href="works-template.html">
-              <div class="works-img"><video width="400px" preload="meta" src="./premiere-pro_works/浜松アクトシティ周辺(スマホ撮影).mp4" controls></video></div>
-              <p class="works-name">浜松アクトシティ周辺(スマホ撮影)</p>
-              <p class="works-info">Video Editing</p>
-            </a>
-            <a class="works-item" href="works-template.html">
-              <div class="works-img"><video width="400px" preload="meta" src="./premiere-pro_works/inouenaoto-self-interview.mp4" controls></video></div>
-              <p class="works-name">SELF INTERVIEW</p>
-              <p class="works-info">Video Editing</p>
-            </a>
+            <article class="works-item">
+              <a href="works-super-formula.html">
+                <div class="works-img"><video width="400" preload="meta" src="./premiere-pro_works/SUPER-FORMULA_DIRECTORSCUT.mp4" controls></video></div>
+                <p class="works-name">SUPER FORMULA DIRECTORSCUT</p>
+                <p class="works-info">Video Editing</p>
+              </a>
+            </article>
+            <article class="works-item">
+              <a href="works-brewmin.html">
+                <div class="works-img"><video width="400" preload="meta" src="./premiere-pro_works/BREWMIN.mp4" controls></video></div>
+                <p class="works-name">浜松クラフトビールフェス2024<br>BREWMIN様</p>
+                <p class="works-info">Video Editing</p>
+              </a>
+            </article>
+            <article class="works-item">
+              <a href="works-hamamatsu.html">
+                <div class="works-img"><video width="400" preload="meta" src="./premiere-pro_works/浜松アクトシティ周辺(スマホ撮影).mp4" controls></video></div>
+                <p class="works-name">浜松アクトシティ周辺<br>(スマホ撮影)</p>
+                <p class="works-info">Video Editing</p>
+              </a>
+            </article>
+            <article class="works-item">
+              <a href="works-self-interview.html">
+                <div class="works-img"><video width="400" preload="meta" src="./premiere-pro_works/inouenaoto-self-interview.mp4" controls></video></div>
+                <p class="works-name">SELF INTERVIEW</p>
+                <p class="works-info">Video Editing</p>
+              </a>
+            </article>
           </div>
         </div>
       </section>
-      <!-- /works -->
-
-      <!-- skill -->
-      <section class="skill section" id="skill">
+      <section class="skill section fade-in-up" id="skill">
         <div class="container">
           <h2 class="title">SKILL</h2>
           <div class="skill-list">
             <div class="skill-item">
-              <p class="skill-img"><img src="img/logo_html5.png" alt=""></p>
+              <p class="skill-img"><img src="img/logo_html5.webp" alt="HTML5"></p>
               <div class="skill-body">
                 <h3 class="skill-name">HTML5/CSS3</h3>
                 <p class="skill-text">
                   HTML5とCSS3を使用して、レスポンシブ対応のウェブサイトを構築することができます。
-                  </p>
+                </p>
               </div>
             </div>
             <div class="skill-item">
-              <p class="skill-img"><img src="img/logo_wordpress.png" alt=""></p>
+              <p class="skill-img"><img src="img/logo_wordpress.webp" alt="WordPress"></p>
               <div class="skill-body">
                 <h3 class="skill-name">WordPress</h3>
                 <p class="skill-text">
-                  現在、勉強中です。</p>
+                  WordPressの基礎から応用まで幅広く学習中です。今後は、オリジナルテーマやプラグインの開発にも取り組んでいきたいと考えています。
+                </p>
               </div>
             </div>
             <div class="skill-item">
-              <p class="skill-img"><img src="img/icon_skill.png" alt=""></p>
+              <p class="skill-img"><img src="img/icon_skill.webp" alt="JavaScript"></p>
               <div class="skill-body">
                 <h3 class="skill-name">JavaScript</h3>
                 <p class="skill-text">
-                  基本的なものは扱えます。</p>
+                  JavaScriptを使用して、ウェブサイトに動的な機能やインタラクションを追加できます。ユーザーの操作に応じてコンテンツの表示を切り替えたり、アニメーションやフォームのバリデーションなど、さまざまな動作を実現します。
+                </p>
               </div>
             </div>
             <div class="skill-item">
-              <p class="skill-img"><img src="img/logo_ps.jpg" alt=""></p>
+              <p class="skill-img"><img src="img/logo_ps.webp" alt="Photoshop"></p>
               <div class="skill-body">
                 <h3 class="skill-name">Photoshop</h3>
                 <p class="skill-text">
                   Photoshopを使用して、画像の編集や加工、バナーの作成などができます。また、写真のレタッチや合成も得意です。さらに、デザインのクオリティを高めるためのテクニックも習得しています。
-                  </p>
+                </p>
               </div>
             </div>
             <div class="skill-item">
-              <p class="skill-img"><img src="img/logo_ai.jpg" alt=""></p>
+              <p class="skill-img"><img src="img/logo_ai.webp" alt="Illustrator"></p>
               <div class="skill-body">
                 <h3 class="skill-name">Illustrator</h3>
                 <p class="skill-text">
-                  Illustratorを使用して、ロゴデザインやイラストの作成、ベクター画像の編集ができます。また、印刷物のデザインやレイアウトも得意です。</p>
+                  Illustratorを使用して、ロゴデザインやイラストの作成、ベクター画像の編集ができます。また、印刷物のデザインやレイアウトも得意です。
+                </p>
               </div>
             </div>
             <div class="skill-item">
-              <p class="skill-img"><img src="img/logo_pr.jpg" alt=""></p>
+              <p class="skill-img"><img src="img/logo_pr.webp" alt="PremierePro"></p>
               <div class="skill-body">
                 <h3 class="skill-name">PremierePro</h3>
                 <p class="skill-text">
-                  PremiereProを使用して、カット編集からエフェクトやトランジションなどを使用した動画なども編集可能です。</p>
+                  PremiereProを使用して、カット編集からエフェクトやトランジションなどを使用した動画なども編集可能です。
+                </p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="skill-img"><img src="img/logo_ae.webp" alt="After Effects"></p>
+              <div class="skill-body">
+                <h3 class="skill-name">After Effects</h3>
+                <p class="skill-text">
+                  After Effectsを使用して、モーショングラフィックスやビジュアルエフェクトの制作ができます。動画にアニメーションや特殊効果を加えることで、より魅力的な映像作品を作成しています。
+                </p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="skill-img"><img src="img/logo_lr.webp" alt="Lightroom"></p>
+              <div class="skill-body">
+                <h3 class="skill-name">Lightroom</h3>
+                <p class="skill-text">
+                  Lightroomを使用して、写真の現像や色調補正、バッチ処理などができます。RAW現像や写真の管理・整理も効率的に行えます。
+                </p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="skill-img"><img src="img/logo_figma.webp" alt="Figma"></p>
+              <div class="skill-body">
+                <h3 class="skill-name">Figma</h3>
+                <p class="skill-text">
+                  Figmaを使用して、UIデザインやプロトタイプの作成ができます。チーム開発での共同作業やデザインシステムの構築にも対応しています。
+                </p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="skill-img"><img src="img/logo_au.webp" alt="Audition"></p>
+              <div class="skill-body">
+                <h3 class="skill-name">Audition</h3>
+                <p class="skill-text">
+                  Adobe Auditionを使用して、音声編集やオーディオミキシングができます。動画制作における音声品質の向上やポッドキャスト制作にも活用しています。
+                </p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="skill-img"><img src="img/logo_excel.webp" alt="Excel"></p>
+              <div class="skill-body">
+                <h3 class="skill-name">Excel</h3>
+                <p class="skill-text">
+                  Microsoft Excelを使用して、データ分析や表計算、グラフ作成ができます。プロジェクト管理や進捗管理にも活用しており、効率的な業務遂行をサポートしています。
+                </p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="skill-img"><img src="img/logo_powerpoint.webp" alt="PowerPoint"></p>
+              <div class="skill-body">
+                <h3 class="skill-name">PowerPoint</h3>
+                <p class="skill-text">
+                  Microsoft PowerPointを使用して、プレゼンテーション資料の作成ができます。デザイン性の高いスライドやアニメーション効果を活用し、効果的な提案資料を制作しています。
+                </p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="skill-img"><img src="img/logo_word.webp" alt="Word"></p>
+              <div class="skill-body">
+                <h3 class="skill-name">Word</h3>
+                <p class="skill-text">
+                  Microsoft Wordを使用して、企画書や提案書、レポートなどの文書作成ができます。レイアウトやフォーマットにこだわり、読みやすく整理された文書を作成しています。
+                </p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="skill-img"><img src="img/logo_google_drive.webp" alt="Google Drive"></p>
+              <div class="skill-body">
+                <h3 class="skill-name">Google Drive</h3>
+                <p class="skill-text">
+                  Google Driveを使用して、ファイルの共有や共同編集、クラウドストレージの管理ができます。チームでのプロジェクト管理や資料の整理に活用しています。
+                </p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="skill-img"><img src="img/logo_google_forms.webp" alt="Google Forms"></p>
+              <div class="skill-body">
+                <h3 class="skill-name">Google Forms</h3>
+                <p class="skill-text">
+                  Google Formsを使用して、アンケートやお問い合わせフォーム、申込みフォームの作成ができます。データ収集と分析を効率的に行うことができます。
+                </p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="skill-img"><img src="img/logo_google_sheets.webp" alt="Google Sheets"></p>
+              <div class="skill-body">
+                <h3 class="skill-name">Google Sheets</h3>
+                <p class="skill-text">
+                  Google Sheetsを使用して、データ管理や分析、グラフ作成ができます。リアルタイムでの共同編集機能を活用し、チームでの作業効率を向上させています。
+                </p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="skill-img"><img src="img/logo_google_docs.webp" alt="Google Docs"></p>
+              <div class="skill-body">
+                <h3 class="skill-name">Google Docs</h3>
+                <p class="skill-text">
+                  Google Docsを使用して、文書作成や共同編集ができます。リアルタイムでのコメント機能やバージョン管理を活用し、効率的な文書作成を行っています。
+                </p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="skill-img"><img src="img/logo_google_slides.webp" alt="Google Slides"></p>
+              <div class="skill-body">
+                <h3 class="skill-name">Google Slides</h3>
+                <p class="skill-text">
+                  Google Slidesを使用して、プレゼンテーション資料の作成ができます。クラウドベースでの共同編集機能により、チームでの資料作成を効率化しています。
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- /skill -->
-
-      <!-- about -->
-      <section class="about section" id="about">
+      <section class="about section fade-in-up" id="about">
         <div class="container">
           <h2 class="title">ABOUT</h2>
           <div class="profile">
             <p class="profile-img">
-              <img src="img/icon.png" alt="">
+              <img src="img/icon.webp" alt="井上真翔 プロフィール写真">
             </p>
             <div class="profile-body">
               <p>
@@ -191,10 +297,7 @@
           </div>
         </div>
       </section>
-      <!-- /about -->
-
-      <!-- contact -->
-      <section class="contact section" id="contact">
+      <section class="contact section fade-in-up" id="contact">
         <div class="container">
           <h2 class="title">CONTACT</h2>
           <p class="lead">
@@ -207,20 +310,19 @@
           </div>
         </div>
       </section>
-      <!-- /contact -->
       <div class="page-top" id="js-page-top">
         <span class="material-icons-outlined">expand_less</span>
       </div>
+
     </main>
 
-    <!-- footer -->
     <footer class="footer">
       <div class="copyright">&copy;INOUE NAOTO</div>
     </footer>
-    <!-- /footer -->
+    </div>
 
-  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/script.js"></script>
 </body>
+
 </html>
