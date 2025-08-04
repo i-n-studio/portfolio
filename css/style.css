@@ -221,7 +221,7 @@ img {
   display: flex;
   max-width: 1280px;
   min-height: calc(600px + 10vh);
-  max-height: 710px;
+  /* max-height: 710px; */
   height: calc(100vh - 80px);
   margin: 0 auto;
   position: relative;
