@@ -530,13 +530,28 @@ img {
  ページトップ
 ---------------------------------*/
 .page-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
   padding: 15px;
   font-weight: bold;
   text-align: center;
   background-color: #4c4c4c;
   cursor: pointer;
   transition: all .3s ease;
-  border-radius: 50px 50px 0 0;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  z-index: 1000;
+}
+
+.page-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .page-top:hover {
@@ -546,8 +561,10 @@ img {
 }
 
 .page-top .material-icons-outlined {
-  vertical-align: bottom;
+  vertical-align: middle;
   color: #fff;
+  font-size: 24px;
+  line-height: 1;
 }
 
 /*--------------------------------
@@ -795,5 +812,18 @@ img {
     font-size: 14px;
     line-height: 1.7;
     margin-bottom: 20px;
+  }
+
+  /* ページトップボタン（スマートフォン） */
+  .page-top {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    padding: 12px;
+  }
+
+  .page-top .material-icons-outlined {
+    font-size: 20px;
   }
 }

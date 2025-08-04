@@ -74,6 +74,13 @@ $(function() {
   // スクロール時にアニメーション実行
   $(window).scroll(function() {
     scrollAnimation();
+
+    // ページトップボタンの表示/非表示制御
+    if ($(this).scrollTop() > 300) {
+      $('#js-page-top').addClass('show');
+    } else {
+      $('#js-page-top').removeClass('show');
+    }
   });
 
   // ページ読み込み時にもアニメーション実行
